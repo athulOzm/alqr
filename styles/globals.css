@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{background: #000; overflow: hidden;}
+.h-80vh{max-height: 80vh;}
+.categories-filter{display:flex;overflow:auto}
+.categories-filter::-webkit-scrollbar{display:none;opacity:0}
+.categories-filter a{color:inherit;background:#1c1c1d;border-radius:9999px;padding:4px 16px 4px 4px;display:flex;align-items:center;font-weight:500;font-size:16px;position:relative;overflow:hidden;flex-shrink:0; color: white; font-weight: 300;}
+.dark .categories-filter a{background:var(--f7-block-strong-bg-color)}
+.md .categories-filter a{transition-duration:.2s}
+.categories-filter a.category-active{color:#fff;background-color:var(--f7-theme-color)}
+.categories-filter a+a{margin-left:8px}
+.categories-filter span img{width:40px;height:40px;margin-right:4px;border-radius:50%;object-fit:contain;object-position:center; padding: 1px 6px!important;}
+.item-cards-scrollable{overflow:auto;display:flex;padding-bottom:16px;scrollbar-width:none}
+.item-cards-scrollable::-webkit-scrollbar{display:none;opacity:0}
+.item-cards-scrollable .item-card+.item-card{margin-left:16px}
+
+@media (max-width: 399px){.item-cards:not(.item-cards-scrollable){display:grid;grid-template-columns:repeat(2,1fr);grid-gap:16px;gap:16px}.item-cards:not(.item-cards-scrollable) .item-card{width:auto}}
+
+@media (min-width: 400px){.item-cards:not(.item-cards-scrollable){display:flex;flex-wrap:wrap}.item-cards:not(.item-cards-scrollable) .item-card{margin-right:16px;margin-bottom:16px}}
+
+.item-card{background:#1c1c1d;border-radius:24px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;flex-shrink:0;box-shadow:0 10px 20px -14px #48050580;color:white;transition-duration:.1s;transition-property:transform,box-shadow;min-width:0}.dark .item-card{background:var(--f7-block-strong-bg-color)}.item-card.active-state{box-shadow:0 10px 20px -14px #48050500;transform:scale(.95)}.item-card-image{width:100%;aspect-ratio:1/1;object-fit:contain;object-position:center;border-radius:24px 24px 0 0}.item-card-content{padding:16px;width:100%;box-sizing:border-box}.item-card-title{font-weight:bold;font-size:18px} 
+.item-card-subtitle{position:relative;overflow:hidden;text-overflow:ellipsis;max-width:100%;height:40px;-webkit-line-clamp:var(--f7-list-item-text-max-lines);-webkit-box-orient:vertical;display:-webkit-box}
+.item-card-price{font-size:18px;font-weight:bold}
+.item-card-price span{color:purple;margin-right:4px}.categories-filter{display:flex;overflow:auto}
